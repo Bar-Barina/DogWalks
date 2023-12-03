@@ -1,27 +1,22 @@
-import {StyleSheet, Button, Image } from "react-native";
+import { StyleSheet, View, Text, Button, Image } from "react-native";
 import React from "react";
-import { LinearGradient } from "expo-linear-gradient";
 
 export default function Home({ navigation }) {
   function getStarted() {
-    navigation.navigate("Categories");
+    // navigation.navigate("Categories");
   }
 
   return (
-    <LinearGradient
-      colors={["#414360", "#f7f7ff", "#aa4203"]}
-      style={styles.homeContainer}
-    >
-      <Image
-        source={require("../assets/images/logo.png")}
-        style={styles.image}
-      />
+    <View style={styles.homeContainer}>
+      <Text style={styles.logo}>DogWalks</Text>
+      {/* <Text>The BEST place to track your dog walks between house members.</Text> */}
+      <Image source={require("../assets/HomeImg.png")} style={styles.image} />
       <Button
-        title="Get Started!"
+        title="Get started by adding your dog!"
         onPress={getStarted}
         android_ripple={{ color: "#CCC7" }}
       />
-    </LinearGradient>
+    </View>
   );
 }
 
@@ -32,9 +27,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     elevation: 4,
   },
+  logo: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#f95154",
+  },
   image: {
-    margin: 50,
-    width: 230,
-    height: 260,
+    margin: 30,
+    width: 250,
+    height: 220,
   },
 });
