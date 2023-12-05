@@ -10,7 +10,6 @@ export default function Home({ navigation }) {
   return (
     <View style={styles.homeContainer}>
       <Text style={styles.logo}>DogWalks</Text>
-      {/* <Text>The BEST place to track your dog walks between house members.</Text> */}
       <Image source={require("../assets/HomeImg.png")} style={styles.image} />
       <Button
         title="Get started by adding your dog!"
