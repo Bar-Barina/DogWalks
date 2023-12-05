@@ -1,10 +1,12 @@
-import { StyleSheet, View, Text, Button, Image } from "react-native";
 import React from "react";
+import { StyleSheet, View, Text, Button, Image } from "react-native";
 
-export default function Home({ navigation }) {
-  
+
+export default function Home({navigation}) {
+
+ 
   function getStarted() {
-    // navigation.navigate("Categories");
+    navigation.navigate("DogEdit");
   }
 
   return (
@@ -12,7 +14,7 @@ export default function Home({ navigation }) {
       <Text style={styles.logo}>DogWalks</Text>
       <Image source={require("../assets/HomeImg.png")} style={styles.image} />
       <Button
-        title="Get started by adding your dog!"
+        title="Get started!"
         onPress={getStarted}
         android_ripple={{ color: "#CCC7" }}
       />
