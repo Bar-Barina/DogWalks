@@ -2,6 +2,7 @@ import { StyleSheet, View, Text, Button, Image } from "react-native";
 import React from "react";
 
 export default function Home({ navigation }) {
+  
   function getStarted() {
     // navigation.navigate("Categories");
   }
