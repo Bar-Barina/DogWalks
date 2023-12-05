@@ -1,26 +1,22 @@
-import React, {useLayoutEffect} from "react";
-import { MEALS,CATEGORIES } from "../data/dummy-data";
-import MealList from "../cmps/Meal/MealList";
-import { LinearGradient } from "expo-linear-gradient";
+import React from "react";
+import DogList from "../cmps/Dog/DogList";
 
-export default function MealsIndex({ route,navigation }) {
-  const catId = route.params.categoryId;
+export default function DogIndex({ route,navigation }) {
+  // const catId = route.params.categoryId;
 
-  const mealsToRender = MEALS.filter((meal) =>
-    meal.categoryIds.includes(catId)
-  );
+  // const dogsToRender = MEALS.filter((dog) =>
+  //   dog.categoryIds.includes(catId)
+  // );
   
-  useLayoutEffect(() => {
-    const catTitle = CATEGORIES.find(category => category.id === catId).title
-    navigation.setOptions({
-      title: catTitle
-    })
-  },[catId,navigation])
+  // useLayoutEffect(() => {
+  //   const catTitle = CATEGORIES.find(category => category.id === catId).title
+  //   navigation.setOptions({
+  //     title: catTitle
+  //   })
+  // },[catId,navigation])
  
 
   return (
-    <LinearGradient colors={["#414360", "#f7f7ff"]}  style={{flex:1}}>
-      <MealList meals={mealsToRender} />
-    </LinearGradient>
+      {/* <DogList dogs={dogsToRender} /> */}
   );
 }
